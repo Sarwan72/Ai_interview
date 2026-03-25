@@ -8,9 +8,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 require("./src/config/db");
 const port = process.env.PORT;
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://your-frontend.com"
+];
+
 const corsOptions = {
   origin: function (origin, callback) {
-    callback(null, origin);
+    console.log("Origin:", origin);
+
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
   },
   credentials: true,
 };
