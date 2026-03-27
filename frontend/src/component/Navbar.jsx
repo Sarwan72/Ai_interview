@@ -23,10 +23,10 @@ const Navbar = () => {
   return (
     <>
       <div className="flex items-center justify-between w-full mx-auto py-3 ps-6  shadow-sm bg-white sticky top-0 z-50">
-        <div className="ml-[250px] max-sm:ml-0 max-lg:ml-0 max-md:ml-0">
+        <div className="ml-[250px] h-20 max-sm:ml-0 max-lg:ml-0 max-md:ml-0">
           <img
             src="/assets/logo-light.png"
-            className="w-56 max-sm:w-[190px] max-md:w-[200px] max-sm:hidden"
+            className="w-56 h-20 max-sm:w-[190px] max-md:w-[200px] max-sm:hidden"
             alt=" "
           />
         </div>
@@ -68,3 +68,5 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
