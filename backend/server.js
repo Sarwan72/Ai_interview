@@ -8,9 +8,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 require("./src/config/db");
 const port = process.env.PORT;
+// const allowedOrigins = [
+//   "http://localhost:5173",
+//   "https://your-frontend.com"
+// ];
+
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://your-frontend.com"
+  "https://ai-interview-ten-lemon.vercel.app",
+  "https://ai-interview-git-main-sarwan-kumars-projects-17476828.vercel.app",
+  "https://ai-interview-n0boqxte4-sarwan-kumars-projects-17476828.vercel.app"
 ];
 
 const corsOptions = {
